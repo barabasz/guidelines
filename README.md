@@ -16,6 +16,7 @@ This README defines repository-level conventions for writing and maintaining gui
 - [4. Standard Rule Structure](#4-standard-rule-structure)
 - [5. Meta-Guidelines for Writing Guidelines](#5-meta-guidelines-for-writing-guidelines)
 - [6. Glossary](#6-glossary)
+- [7. LLM Usage Notes](#7-llm-usage-notes)
 
 ## 1. Requirement Levels
 
@@ -195,3 +196,17 @@ When adding or modifying guidelines in this repository, follow these core princi
 - **Single Source of Truth (SSOT)** — A central, authoritative repository for definitions, rules, and standards.
 - **Technology Identifier (TECH)** — Canonical uppercase label representing a technology or domain (e.g., SQL, PY, EXCEL).
 
+## 7. LLM Usage Notes
+
+These notes define how Large Language Models (LLMs) should interpret and apply the guidelines in this repository.
+
+- **Rule IDs** — LLMs MUST treat Rule IDs as stable identifiers. They MUST NOT invent new formats, rename existing IDs, or repurpose removed IDs.
+- **Generating New Rule IDs** — When asked to propose new rules, LLMs MUST follow the `TECH-CATEGORY-NUMBER` format, reuse existing `TECH` and `CATEGORY` identifiers, and increment numbers in steps of 10 unless instructed otherwise.
+- **Categories** — LLMs MUST use only canonical categories from the Category Registry unless explicitly asked to propose a new one. Synonymous or near-duplicate categories MUST NOT be created.
+- **Technologies** — LLMs MUST use canonical `TECH` identifiers from the Technology Registry. They MUST NOT introduce alternative spellings or aliases.
+- **Scope Interpretation** — LLMs MUST respect the `Scope` field when present and MUST NOT infer additional scope beyond what is explicitly written.
+- **Rationale Interpretation** — LLMs MUST treat the Rationale section as explanatory only. They MUST NOT extract normative requirements from the rationale.
+- **Examples** — LLMs MUST treat examples as illustrative only. They MUST NOT derive new rules or requirements from examples.
+- **Status** — LLMs MUST assume that all rules present in a guideline document are current and active. Removed rules MUST NOT be considered applicable.
+- **Document Structure** — LLMs MUST preserve the required heading hierarchy and MUST NOT introduce alternative structures when generating or modifying guideline documents.
+- **Consistency** — When generating new content, LLMs SHOULD ensure consistency with existing rules, categories, naming conventions, and formatting conventions.
