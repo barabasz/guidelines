@@ -39,7 +39,7 @@ Every technical rule in a guideline document **MUST** have a stable, unique iden
 
 `TECH` MUST use the canonical identifier defined in this registry. When adding a technology or technical domain that is not yet listed, a new identifier MAY be added. New identifiers SHOULD be short, natural, widely recognizable, and unambiguous; their length is not fixed.
 
-Where a technology has both a language-independent form and one or more dialect- or product-specific forms, these are registered as separate identifiers (see `SQL` / `TSQL` / `PGSQL` below) rather than folded into one, so that a rule's applicability is never ambiguous.
+Where a technology has both a language-independent form and one or more dialect- or product-specific forms, these are registered as separate identifiers (see `SQL` / `TSQL` / `PGSQL` below) rather than folded into one, to make a rule's applicability explicit.
 
 | Identifier | Technology / Domain |
 | :--------- | :------------------- |
