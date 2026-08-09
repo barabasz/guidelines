@@ -2,7 +2,7 @@
 
 This repository serves as the Single Source of Truth (SSOT) for technical standards, best practices, and project conventions across software engineering, data management, Business Intelligence (BI), and system configuration. It is designed to be clear, concise, and directly actionable for both human engineers (including me in the first place) and Large Language Models (LLMs / AI assistants).
 
-A full list of available standards is maintained in the [TOC.md](TOC.md).
+A full list of available standards is maintained in [TOC.md](TOC.md).
 
 **Disclaimer:** These guidelines are a practical, evolving reference created primarily for my own use, as well as for other interested people and AI assistants. They are not an industry standard, formal specification, or institutional policy, and no long-term semantic stability of individual rules or Rule IDs is guaranteed. The current version of the repository defines the current guidance; Git history preserves how that guidance has evolved over time.
 
@@ -25,7 +25,7 @@ Every technical rule in a guideline document **MUST** have a stable, unique iden
 ### Format Specifications
 
 * **TECH**: The canonical uppercase technology identifier defined in the Technology Registry below. When adding a new technology, choose a short, natural, widely recognized, and unambiguous identifier. Its length is not fixed in advance.
-* **CATEGORY**: An uppercase word or natural domain identifier representing the subject area (e.g., `TABLE`, `VIEW`, `QUERY`, `FORMATTING`, `SECURITY`). It **SHOULD** be short, natural, and clear. Its length is not fixed in advance. Existing category identifiers **SHOULD** be reused when they accurately represent the same subject; synonymous categories **SHOULD NOT** be introduced without a specific reason.
+* **CATEGORY**: An uppercase word representing the subject area (e.g., `TABLE`, `VIEW`, `NAMING`). It **SHOULD** be short, natural, and clear, and **SHOULD** use the singular form (see the Category Registry below). Its length is not fixed in advance. Existing category identifiers **SHOULD** be reused when they accurately represent the same subject; synonymous categories **SHOULD NOT** be introduced without a specific reason.
 * **NUMBER**: A 3-digit number unique within each `TECH-CATEGORY` combination. New rules **SHOULD** normally use increments of 10 (`010`, `020`, `030`, ...). Intermediate numbers **MAY** be used when inserting related rules between existing ones.
 
 ### Key Principles
@@ -39,21 +39,25 @@ Every technical rule in a guideline document **MUST** have a stable, unique iden
 
 `TECH` MUST use the canonical identifier defined in this registry. When adding a technology or technical domain that is not yet listed, a new identifier MAY be added. New identifiers SHOULD be short, natural, widely recognizable, and unambiguous; their length is not fixed.
 
-| Identifier | Technology / Domain                          |
-| :--------- | :------------------------------------------- |
-| `AI`       | Artificial Intelligence / AI Assistants      |
-| `BASH`     | Bash Shell                                   |
-| `DAX`      | Data Analysis Expressions                    |
-| `EXCEL`    | Microsoft Excel                              |
-| `M`        | Power Query M Language                       |
-| `PBI`      | Microsoft Power BI                           |
-| `PGSQL`    | PostgreSQL                                   |
-| `PHP`      | PHP                                          |
-| `PY`       | Python                                       |
-| `SQL`      | SQL / General Relational Database Guidelines |
-| `VBA`      | Visual Basic for Applications                |
-| `WORD`     | Microsoft Word                               |
-| `ZSH`      | Zsh Shell                                    |
+Where a technology has both a language-independent form and one or more dialect- or product-specific forms, these are registered as separate identifiers (see `SQL` / `TSQL` / `PGSQL` below) rather than folded into one, so that a rule's applicability is never ambiguous.
+
+| Identifier | Technology / Domain |
+| :--------- | :------------------- |
+| `AI`       | Artificial Intelligence / AI Assistants |
+| `BASH`     | Bash Shell |
+| `BI`       | Business Intelligence — general, tool-independent |
+| `DAX`      | Data Analysis Expressions |
+| `EXCEL`    | Microsoft Excel |
+| `M`        | Power Query M Language |
+| `PBI`      | Microsoft Power BI — product-specific |
+| `PGSQL`    | PostgreSQL / PL-pgSQL — language-specific guidelines |
+| `PHP`      | PHP |
+| `PY`       | Python |
+| `SQL`      | SQL — language-independent, dialect-agnostic (ANSI SQL) guidelines |
+| `TSQL`     | Transact-SQL (SQL Server / Azure SQL) — language-specific guidelines |
+| `VBA`      | Visual Basic for Applications |
+| `WORD`     | Microsoft Word |
+| `ZSH`      | Zsh Shell |
 
 ### Category Registry (`CATEGORY`)
 
@@ -61,29 +65,32 @@ Every technical rule in a guideline document **MUST** have a stable, unique iden
 
 Category identifiers are semantic labels, not fixed-length codes. Their length is not fixed, and natural readability takes precedence over uniform length. Synonymous or near-duplicate categories SHOULD NOT be introduced.
 
-| Identifier      | Intended Scope                                                                      |
-| :-------------- | :---------------------------------------------------------------------------------- |
-| `NAMING`        | Naming conventions for objects, variables, files, identifiers, and related elements |
-| `FORMATTING`    | Layout, whitespace, indentation, line breaks, and other presentation rules          |
-| `STRUCTURE`     | Organization and composition of code, documents, files, modules, or other artifacts |
-| `COMMENTS`      | Inline comments, code comments, annotations, and rules governing their use          |
-| `DOCUMENTATION` | Docstrings, README content, user-facing or developer-facing documentation           |
-| `TYPES`         | Data types, type declarations, type annotations, conversions, and related rules     |
-| `ERRORS`        | Error handling, exceptions, failure behavior, and recovery                          |
-| `VALIDATION`    | Validation of input, data, assumptions, parameters, or state                        |
-| `SECURITY`      | Security-related practices, restrictions, and safeguards                            |
-| `PERFORMANCE`   | Performance, efficiency, resource usage, and optimization                           |
-| `TESTING`       | Automated or manual testing practices and test organization                         |
-| `CONFIGURATION` | Configuration, settings, environment-specific behavior, and configuration files     |
-| `DEPENDENCIES`  | External libraries, packages, modules, extensions, and dependency management        |
-| `TABLE`         | Database table design and table-specific rules                                      |
-| `VIEW`          | Database view design and view-specific rules                                        |
-| `QUERY`         | SQL queries and query construction                                                  |
+Category identifiers use the **singular form** by convention (e.g. `TYPE`, not `TYPES`; `ERROR`, not `ERRORS`), regardless of whether the underlying subject is typically discussed in the plural elsewhere. This is a deliberate, fixed convention adopted for consistency: a category identifier is a topic label ("a rule about type"), not a count of instances.
 
+| Identifier | Intended Scope |
+| :--------- | :--------------- |
+| `NAMING`        | Naming conventions for objects, variables, files, identifiers, and related elements |
+| `FORMATTING`    | Layout, whitespace, indentation, line breaks, and other presentation rules |
+| `STRUCTURE`     | Organization and composition of code, documents, files, modules, or other artifacts |
+| `COMMENT`       | Inline comments, code comments, annotations, and rules governing their use |
+| `DOCUMENTATION` | Docstrings, README content, user-facing or developer-facing documentation |
+| `TYPE`          | Data types, type declarations, type annotations, conversions, and related rules |
+| `ERROR`         | Error handling, exceptions, failure behavior, and recovery |
+| `VALIDATION`    | Validation of input, data, assumptions, parameters, or state |
+| `SECURITY`      | Security-related practices, restrictions, and safeguards |
+| `PERFORMANCE`   | Performance, efficiency, resource usage, and optimization |
+| `TESTING`       | Automated or manual testing practices and test organization |
+| `CONFIGURATION` | Configuration, settings, environment-specific behavior, and configuration files |
+| `DEPENDENCY`    | External libraries, packages, modules, extensions, and dependency management |
+| `TABLE`         | Database table design and table-specific rules |
+| `VIEW`          | Database view design and view-specific rules |
+| `QUERY`         | SQL queries and query construction |
+| `TRANSFORM`     | Data transformation steps (e.g. Power Query M steps, ETL pipeline stages) |
 
 ### Examples
 
 * `SQL-TABLE-010`: Naming conventions for database tables
+* `TSQL-TABLE-010`: Required columns for system-versioned temporal tables
 * `PY-TYPE-010`: Explicit type hinting for public functions
 * `M-TRANSFORM-010`: Standard structure for Power Query cleanup steps
 * `VBA-ERROR-010`: Explicit error handling implementation
