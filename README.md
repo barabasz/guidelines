@@ -75,7 +75,7 @@ Where a technology has both a language-independent form and one or more dialect-
 
 Category identifiers are semantic labels, not fixed-length codes. Their length is not fixed, and natural readability takes precedence over uniform length. Synonymous or near-duplicate categories SHOULD NOT be introduced.
 
-Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not `TYPES`; `ERROR`, not `ERRORS`). A natural gerund or mass noun MAY be used where it better represents the subject (e.g. `NAMING`, `FORMATTING`, `TESTING`, `DOCUMENTATION`).
+Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not ~~`TYPES`~~; `ERROR`, not ~~`ERRORS`~~). A natural gerund or mass noun MAY be used where it better represents the subject (e.g. `NAMING`, `FORMATTING`, `TESTING`). A short, widely recognized truncation MAY be used in place of an unusually long category name, provided it remains unambiguous (e.g. `CONFIG` for configuration, `DOC` for documentation).
 
 | Identifier | Intended Scope |
 | :--------- | :--------------- |
@@ -84,7 +84,7 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 | `FORMATTING`    | Layout, whitespace, indentation, line breaks, and other presentation rules |
 | `STRUCTURE`     | Organization and composition of code, documents, files, modules, or other artifacts |
 | `COMMENT`       | Inline comments, code comments, annotations, and rules governing their use |
-| `DOCUMENTATION` | Docstrings, README content, user-facing or developer-facing documentation |
+| `DOC`           | Docstrings, README content, user-facing or developer-facing documentation |
 | `TYPE`          | Data types, type declarations, type annotations, conversions, and related rules |
 | `ERROR`         | Error handling, exceptions, failure behavior, and recovery |
 | `VALIDATION`    | Validation of input, data, assumptions, parameters, or state |
@@ -98,7 +98,7 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 | `QUERY`         | SQL queries and query construction |
 | `TRANSFORM`     | Data transformation steps (e.g. Power Query M steps, ETL pipeline stages) |
 
-When present, `GENERAL` SHOULD be the first category in a technology-specific guideline document. It SHOULD be used only for rules that apply broadly to the technology or define default behavior when no more specific rule applies.
+`GENERAL` SHOULD be used only for rules that apply broadly to the technology or define default behavior when no more specific rule applies. Its required placement within a guideline document is defined in [3. Guideline Document Structure](#3-guideline-document-structure).
 
 ### Examples
 
@@ -185,11 +185,12 @@ When adding or modifying guidelines in this repository, follow these core princi
 - **General Category** — Category containing broad, technology‑wide principles or defaults.
 - **Git History** — Version control record used to track changes, including removed or modified rules.
 - **Guideline Document** — A file containing rules for a specific technology, organized by categories.
+- **IETF** — Internet Engineering Task Force; the standards organization that publishes RFCs, including those defining BCP 14.
 - **LLM** — Large Language Model; an AI system that can read, interpret, and apply the guidelines.
 - **Meta‑Guidelines** — Rules describing how guideline documents themselves should be written and maintained.
 - **Rationale** — Optional explanation describing why a rule exists or what problem it prevents.
-- **RFC** — Request for Comments; formal documents published by the IETF that define standards, protocols, and technical guidelines.
 - **Requirement Levels** — Normative keywords (MUST, SHOULD, MAY) defined in BCP 14 (RFC 2119 / RFC 8174).
+- **RFC** — Request for Comments; formal documents published by the IETF that define standards, protocols, and technical guidelines.
 - **Rule** — A normative, actionable instruction describing required, recommended, or optional behavior.
 - **Rule ID** — A stable identifier in the format `TECH-CATEGORY-NUMBER` uniquely referencing a specific rule.
 - **Scope** — Optional field specifying conditions or contexts in which a rule applies.
@@ -198,15 +199,8 @@ When adding or modifying guidelines in this repository, follow these core princi
 
 ## 7. LLM Usage Notes
 
-These notes define how Large Language Models (LLMs) should interpret and apply the guidelines in this repository.
+These notes define how Large Language Models (LLMs) should apply this repository. They do not restate definitions already given in §1–§5; LLMs MUST apply those definitions (Rule ID stability, canonical `TECH`/`CATEGORY` identifiers, `Scope`, `Rationale`, `Examples`, the absence of a `Status` field, and the required document structure) exactly as specified there, with no additional interpretation, invented formats, or inferred scope.
 
-- **Rule IDs** — LLMs MUST treat Rule IDs as stable identifiers. They MUST NOT invent new formats, rename existing IDs, or repurpose removed IDs.
-- **Generating New Rule IDs** — When asked to propose new rules, LLMs MUST follow the `TECH-CATEGORY-NUMBER` format, reuse existing `TECH` and `CATEGORY` identifiers, and increment numbers in steps of 10 unless instructed otherwise.
-- **Categories** — LLMs MUST use only canonical categories from the Category Registry unless explicitly asked to propose a new one. Synonymous or near-duplicate categories MUST NOT be created.
-- **Technologies** — LLMs MUST use canonical `TECH` identifiers from the Technology Registry. They MUST NOT introduce alternative spellings or aliases.
-- **Scope Interpretation** — LLMs MUST respect the `Scope` field when present and MUST NOT infer additional scope beyond what is explicitly written.
-- **Rationale Interpretation** — LLMs MUST treat the Rationale section as explanatory only. They MUST NOT extract normative requirements from the rationale.
-- **Examples** — LLMs MUST treat examples as illustrative only. They MUST NOT derive new rules or requirements from examples.
-- **Status** — LLMs MUST assume that all rules present in a guideline document are current and active. Removed rules MUST NOT be considered applicable.
-- **Document Structure** — LLMs MUST preserve the required heading hierarchy and MUST NOT introduce alternative structures when generating or modifying guideline documents.
-- **Consistency** — When generating new content, LLMs SHOULD ensure consistency with existing rules, categories, naming conventions, and formatting conventions.
+- **Generating New Rule IDs**: When proposing a new rule, LLMs MUST use the `TECH-CATEGORY-NUMBER` format, reuse an existing canonical `TECH` and `CATEGORY` identifier whenever one accurately fits, and increment `NUMBER` in steps of 10 within the relevant `TECH-CATEGORY` combination unless instructed otherwise.
+- **New Identifiers**: LLMs MUST NOT invent a new `TECH` or `CATEGORY` identifier, or an alternative spelling or alias for an existing one, unless explicitly asked to propose one.
+- **Consistency**: When generating or modifying guideline content, LLMs SHOULD keep it consistent with existing rules, categories, naming conventions, and formatting used elsewhere in the repository.
