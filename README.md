@@ -81,6 +81,7 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 | :--------- | :--------------- |
 | `GENERAL`       | Technology-wide principles, defaults, fallback rules, and references to external standards |
 | `NAMING`        | Naming conventions for objects, variables, files, identifiers, and related elements |
+| `IDIOM`         | Preference for a language's native, idiomatic constructs over external tools, compatibility layers, or non-native equivalents |
 | `FORMATTING`    | Layout, whitespace, indentation, line breaks, and other presentation rules |
 | `STRUCTURE`     | Organization and composition of code, documents, files, modules, or other artifacts |
 | `COMMENT`       | Inline comments, code comments, annotations, and rules governing their use |
