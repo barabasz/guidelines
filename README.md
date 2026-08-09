@@ -19,18 +19,21 @@ Every rule **MUST** have a permanent, unique identifier using the following form
 `[TECH]-[CATEGORY]-[NUMBER]`
 
 ### Format Specifications:
-* **TECH**: Standard 3-letter uppercase identifier from the Technology Registry (e.g., `SQL`, `PYT`, `VBA`).
-* **CATEGORY**: Full uppercase word representing the functional domain (e.g., `TABLE`, `VIEW`, `QUERY`, `FORMATTING`, `SECURITY`).
-* **NUMBER**: 3-digit number. Numbers **SHOULD** increment by 10 (e.g., `010`, `020`, `030`) to leave room for intermediate rules.
 
-### Immutability Constraint:
-Once a Rule ID is assigned, it **MUST NOT** be modified or re-used, even if the underlying requirement changes or becomes obsolete. If a rule is retired, change its status to `[DEPRECATED]`.
+* **TECH**: The shortest, widely recognized uppercase abbreviation for the technology (e.g., `SQL`, `PY`, `M`, `VBA`, `DAX`, `ZSH`). It **MUST** be concise, natural, and unambiguous. Its length is not fixed in advance.
+* **CATEGORY**: An uppercase word or natural domain identifier representing the subject area (e.g., `TABLE`, `VIEW`, `QUERY`, `FORMATTING`, `SECURITY`). It **MUST** be as short, natural, and clear as possible. Its length is not fixed in advance.
+* **NUMBER**: A 3-digit sequential number. Numbers **SHOULD** increment by 10 (e.g., `010`, `020`, `030`) to allow inserting intermediate rules if needed.
+
+### Key Principles:
+
+1. **No Arbitrary Length Caps**: Neither `TECH` nor `CATEGORY` has a fixed character limit. Natural readability, clarity, and widespread adoption always supersede rigid length restrictions.
+2. **Immutability**: Once assigned and published, a Rule ID **MUST NOT** be modified or re-used, even if the underlying rule evolves, changes direction, or becomes obsolete. If a rule is retired, change its status to `[DEPRECATED]`.
 
 ### Examples:
 * `SQL-TABLE-010`: Naming conventions for database tables
-* `SQL-VIEW-020`: Materialized view refresh requirements
-* `PYT-FORMATTING-010`: Type hints on public functions
-* `VBA-ERROR-010`: Explicit error handling requirements
+* `PY-TYPES-010`: Explicit type hinting for public functions
+* `M-TRANSFORM-010`: Standard structure for Power Query cleanup steps
+* `VBA-ERROR-010`: Explicit error handling implementation
 
 ## 3. Standard Rule Structure
 
