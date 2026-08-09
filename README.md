@@ -15,6 +15,7 @@ This README defines repository-level conventions for writing and maintaining gui
 - [3. Guideline Document Structure](#3-guideline-document-structure)
 - [4. Standard Rule Structure](#4-standard-rule-structure)
 - [5. Meta-Guidelines for Writing Guidelines](#5-meta-guidelines-for-writing-guidelines)
+- [6. Glossary](#6-glossary)
 
 ## 1. Requirement Levels
 
@@ -89,7 +90,7 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 | `SECURITY`      | Security-related practices, restrictions, and safeguards |
 | `PERFORMANCE`   | Performance, efficiency, resource usage, and optimization |
 | `TESTING`       | Automated or manual testing practices and test organization |
-| `CONFIGURATION` | Configuration, settings, environment-specific behavior, and configuration files |
+| `CONFIG`        | Configuration, settings, environment-specific behavior, and configuration files |
 | `DEPENDENCY`    | External libraries, packages, modules, extensions, and dependency management |
 | `TABLE`         | Database table design and table-specific rules |
 | `VIEW`          | Database view design and view-specific rules |
@@ -156,9 +157,9 @@ Every technical rule in a guideline document **MUST** use the following core str
 
 ### Why There Is No Status Field
 
-Guideline documents intentionally contain only current rules. A rule's presence in the current version of a guideline document means that it is current and active; its applicability is determined by the rule itself and, when present, its scope. Therefore, rules do not have an explicit `Status` field.
+Guideline documents intentionally contain only **current, active rules**. A rule is considered valid simply because it appears in the document; its applicability is defined by the rule itself and, when present, its Scope. For this reason, a separate Status field is unnecessary.
 
-Obsolete rules **SHOULD** be removed rather than retained as `DEPRECATED`. Previous versions remain available through Git history. This is a deliberate design choice intended to keep the repository current, concise, easy to read, and low-maintenance.
+Rules that become obsolete **SHOULD** be removed rather than marked as `DEPRECATED`. Git history already preserves previous versions and makes the evolution of rules fully traceable without cluttering current documents.
 
 ## 5. Meta-Guidelines for Writing Guidelines
 
@@ -174,3 +175,23 @@ When adding or modifying guidelines in this repository, follow these core princi
 8. **Explicit Exceptions**: Known and intentional exceptions **SHOULD** be stated explicitly when they are important for applying the rule correctly.
 9. **Consistency**: Guidelines **SHOULD NOT** contain contradictory rules. If a rule intentionally defines an exception to another rule, that exception **SHOULD** be stated explicitly rather than left for the reader to infer.
 10. **Minimalism**: A new rule **SHOULD** be added only when it captures a principle worth remembering, helps make a recurring decision, or prevents a real and recurring problem. Avoid documenting low-value preferences merely for completeness.
+
+## 6. Glossary
+
+- **BCP** — Best Current Practice; an IETF document category defining widely accepted conventions or standards.
+- **Category Identifier (CATEGORY)** — Canonical uppercase label representing the subject area of a rule (e.g., NAMING, STRUCTURE).
+- **Example** — Optional code or text snippet illustrating compliant or non‑compliant behavior.
+- **General Category** — Category containing broad, technology‑wide principles or defaults.
+- **Git History** — Version control record used to track changes, including removed or modified rules.
+- **Guideline Document** — A file containing rules for a specific technology, organized by categories.
+- **LLM** — Large Language Model; an AI system that can read, interpret, and apply the guidelines.
+- **Meta‑Guidelines** — Rules describing how guideline documents themselves should be written and maintained.
+- **Rationale** — Optional explanation describing why a rule exists or what problem it prevents.
+- **RFC** — Request for Comments; formal documents published by the IETF that define standards, protocols, and technical guidelines.
+- **Requirement Levels** — Normative keywords (MUST, SHOULD, MAY) defined in BCP 14 (RFC 2119 / RFC 8174).
+- **Rule** — A normative, actionable instruction describing required, recommended, or optional behavior.
+- **Rule ID** — A stable identifier in the format `TECH-CATEGORY-NUMBER` uniquely referencing a specific rule.
+- **Scope** — Optional field specifying conditions or contexts in which a rule applies.
+- **Single Source of Truth (SSOT)** — A central, authoritative repository for definitions, rules, and standards.
+- **Technology Identifier (TECH)** — Canonical uppercase label representing a technology or domain (e.g., SQL, PY, EXCEL).
+
