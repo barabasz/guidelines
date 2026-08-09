@@ -50,11 +50,11 @@ Where a technology has both a language-independent form and one or more dialect-
 | `EXCEL`    | Microsoft Excel |
 | `M`        | Power Query M Language |
 | `PBI`      | Microsoft Power BI — product-specific |
-| `PGSQL`    | PostgreSQL — product- and dialect-specific guidelines |
+| `PGSQL`    | PostgreSQL — dialect-specific guidelines |
 | `PHP`      | PHP |
 | `PY`       | Python |
 | `SQL`      | SQL — dialect-agnostic guidelines based on the SQL standard |
-| `TSQL`     | Transact-SQL (SQL Server / Azure SQL) — language-specific guidelines |
+| `TSQL`     | Transact-SQL (SQL Server / Azure SQL) — dialect-specific guidelines |
 | `VBA`      | Visual Basic for Applications |
 | `WORD`     | Microsoft Word |
 | `ZSH`      | Zsh Shell |
