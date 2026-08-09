@@ -1,6 +1,6 @@
-# General Coding Guidelines
+# Technical Guidelines & Standards
 
-This repository serves as the Single Source of Truth (SSOT) for programming standards across projects. It is designed to be easily readable by both human software engineers and Large Language Models (LLMs / AI assistants).
+This repository serves as the Single Source of Truth (SSOT) for technical standards, best practices, and project conventions across software engineering, data management, Business Intelligence (BI), and system configuration. It is designed to be clear, structured, and directly actionable for both human engineers (including me in first place) and Large Language Models (LLMs / AI assistants).
 
 ## 1. Requirement Levels (RFC 2119)
 
