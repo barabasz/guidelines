@@ -75,7 +75,7 @@ Where a technology has both a language-independent form and one or more dialect-
 
 Category identifiers are semantic labels, not fixed-length codes. Their length is not fixed, and natural readability takes precedence over uniform length. Synonymous or near-duplicate categories SHOULD NOT be introduced.
 
-Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not ~~`TYPES`~~; `ERROR`, not ~~`ERRORS`~~). A natural gerund or mass noun MAY be used where it better represents the subject (e.g. `NAMING`, `FORMATTING`, `TESTING`). A short, widely recognized truncation MAY be used in place of an unusually long category name, provided it remains unambiguous (e.g. `CONFIG` for configuration, `DOC` for documentation).
+Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not `TYPES`; `ERROR`, not `ERRORS`). A natural gerund or mass noun MAY be used where it better represents the subject (e.g. `NAMING`, `FORMATTING`, `TESTING`). A short, widely recognized truncation MAY be used in place of an unusually long category name, provided it remains unambiguous (e.g. `CONFIG` for configuration, `DOC` for documentation).
 
 | Identifier | Intended Scope |
 | :--------- | :--------------- |
@@ -98,7 +98,7 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 | `QUERY`         | SQL queries and query construction |
 | `TRANSFORM`     | Data transformation steps (e.g. Power Query M steps, ETL pipeline stages) |
 
-`GENERAL` SHOULD be used only for rules that apply broadly to the technology or define default behavior when no more specific rule applies. Its required placement within a guideline document is defined in [3. Guideline Document Structure](#3-guideline-document-structure).
+`GENERAL` SHOULD be used only for rules that apply broadly to the technology or define default behavior when no more specific rule applies. Its required placement within a guideline document is defined in [§3](#3-guideline-document-structure).
 
 ### Examples
 
@@ -109,6 +109,8 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 * `VBA-ERROR-010`: Explicit error handling implementation
 
 ## 3. Guideline Document Structure
+
+Each technology-specific guideline document **MUST** be a single Markdown file whose name is the lowercase form of its `TECH` identifier with a `.md` extension (e.g. `sql.md`, `py.md`, `tsql.md`).
 
 Each technology-specific guideline document **MUST** use the following heading hierarchy:
 
