@@ -203,6 +203,6 @@ When adding or modifying guidelines in this repository, follow these core princi
 
 These notes define how Large Language Models (LLMs) should apply this repository. They do not restate definitions already given in §1–§5; LLMs MUST apply those definitions (Rule ID stability, canonical `TECH`/`CATEGORY` identifiers, `Scope`, `Rationale`, `Examples`, the absence of a `Status` field, and the required document structure) exactly as specified there, with no additional interpretation, invented formats, or inferred scope.
 
-- **Generating New Rule IDs**: When proposing a new rule, LLMs MUST use the `TECH-CATEGORY-NUMBER` format, reuse an existing canonical `TECH` and `CATEGORY` identifier whenever one accurately fits, and increment `NUMBER` in steps of 10 within the relevant `TECH-CATEGORY` combination unless instructed otherwise.
+- **Generating New Rule IDs**: When proposing a new rule, LLMs MUST use the `TECH-CATEGORY-NUMBER` format, reuse an existing canonical `TECH` and `CATEGORY` identifier whenever one accurately fits, and follow the numbering rules defined in §2.
 - **New Identifiers**: LLMs MUST NOT invent a new `TECH` or `CATEGORY` identifier, or an alternative spelling or alias for an existing one, unless explicitly asked to propose one.
 - **Consistency**: When generating or modifying guideline content, LLMs SHOULD keep it consistent with existing rules, categories, naming conventions, and formatting used elsewhere in the repository.
