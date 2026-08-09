@@ -8,7 +8,15 @@ A full list of available standards is maintained in [TOC.md](TOC.md).
 
 This README defines repository-level conventions for writing and maintaining guideline documents. It is not itself a technology-specific guideline, so the meta-guidelines in this file do not use Rule IDs.
 
-## 1. Requirement Levels (BCP 14)
+## Table of Contents
+
+- [1. Requirement Levels](#1-requirement-levels)
+- [2. Rule Identification Protocol](#2-rule-identification-protocol)
+- [3. Guideline Document Structure](#3-guideline-document-structure)
+- [4. Standard Rule Structure](#4-standard-rule-structure)
+- [5. Meta-Guidelines for Writing Guidelines](#5-meta-guidelines-for-writing-guidelines)
+
+## 1. Requirement Levels
 
 All guidelines use the requirement keywords defined by BCP 14 ([RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119) and [RFC 8174](https://datatracker.ietf.org/doc/html/rfc8174)). These words have their normative meaning only when written in ALL CAPS:
 
@@ -98,7 +106,23 @@ When present, `GENERAL` SHOULD be the first category in a technology-specific gu
 * `M-TRANSFORM-010`: Standard structure for Power Query cleanup steps
 * `VBA-ERROR-010`: Explicit error handling implementation
 
-## 3. Standard Rule Structure
+## 3. Guideline Document Structure
+
+Each technology-specific guideline document **MUST** use the following heading hierarchy:
+
+```markdown
+# [TECH]: [Technology / Domain Name]
+
+## [CATEGORY]
+
+### [TECH]-[CATEGORY]-[NUMBER]: [Short Rule Title]
+```
+
+The level-1 heading identifies the technology or domain, level-2 headings group rules by category, and level-3 headings identify individual rules.
+
+If the `GENERAL` category is present, it **SHOULD** be the first category in the document. The order of all other categories **MAY** be chosen to best fit the technology and the content of the guideline.
+
+## 4. Standard Rule Structure
 
 Every technical rule in a guideline document **MUST** use the following core structure. Optional sections should be included only when they add useful information and should be omitted rather than left empty.
 
@@ -136,7 +160,7 @@ Guideline documents intentionally contain only current rules. A rule's presence 
 
 Obsolete rules **SHOULD** be removed rather than retained as `DEPRECATED`. Previous versions remain available through Git history. This is a deliberate design choice intended to keep the repository current, concise, easy to read, and low-maintenance.
 
-## 4. Meta-Guidelines for Writing Guidelines
+## 5. Meta-Guidelines for Writing Guidelines
 
 When adding or modifying guidelines in this repository, follow these core principles:
 
