@@ -69,6 +69,7 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 
 | Identifier | Intended Scope |
 | :--------- | :--------------- |
+| `GENERAL`       | Technology-wide principles, defaults, fallback rules, and references to external standards |
 | `NAMING`        | Naming conventions for objects, variables, files, identifiers, and related elements |
 | `FORMATTING`    | Layout, whitespace, indentation, line breaks, and other presentation rules |
 | `STRUCTURE`     | Organization and composition of code, documents, files, modules, or other artifacts |
@@ -86,6 +87,8 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 | `VIEW`          | Database view design and view-specific rules |
 | `QUERY`         | SQL queries and query construction |
 | `TRANSFORM`     | Data transformation steps (e.g. Power Query M steps, ETL pipeline stages) |
+
+When present, `GENERAL` SHOULD be the first category in a technology-specific guideline document. It SHOULD be used only for rules that apply broadly to the technology or define default behavior when no more specific rule applies.
 
 ### Examples
 
