@@ -38,7 +38,7 @@ Instead, every rule **MUST** have a unique, descriptive slug identifier using th
 
 Every rule in a guideline document **SHOULD** follow this structural template to ensure parsing consistency for both humans and AI:
 
-```markdown
+````markdown
 ### RULE-[TECH]-[CATEGORY]-[SLUG]: [Short Rule Title]
 
 * Severity: **[MUST | SHOULD | MAY]**
@@ -47,15 +47,15 @@ Every rule in a guideline document **SHOULD** follow this structural template to
 [Clear, concise description of the rule in 1-3 sentences.]
 
 #### Good Example
-/`/`/`[language]
+```[language]
 [Compliant code snippet]
-/`/`/`
+```
 
 #### Bad Example
-/`/`/`[language]
+```[language]
 [Compliant code snippet]
-/`/`/`
 ```
+````
 
 ## 4. Meta-Guidelines for Writing Guidelines
 
