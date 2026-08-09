@@ -2,6 +2,8 @@
 
 This repository serves as the Single Source of Truth (SSOT) for technical standards, best practices, and project conventions across software engineering, data management, Business Intelligence (BI), and system configuration. It is designed to be clear, structured, and directly actionable for both human engineers (including me in first place) and Large Language Models (LLMs / AI assistants).
 
+A full list of available standards is maintained in the [TOC.md](TOC.md).
+
 ## 1. Requirement Levels (RFC 2119)
 
 All guidelines use standard severity keywords as defined in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119) and [RFC 8174](https://datatracker.ietf.org/doc/html/rfc8174). When written in ALL CAPS, they carry the following interpretations:
