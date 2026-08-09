@@ -98,7 +98,7 @@ Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not
 | `QUERY`         | SQL queries and query construction |
 | `TRANSFORM`     | Data transformation steps (e.g. Power Query M steps, ETL pipeline stages) |
 
-`GENERAL` SHOULD be used only for rules that apply broadly to the technology or define default behavior when no more specific rule applies. Its required placement within a guideline document is defined in [§3](#3-guideline-document-structure).
+`GENERAL` SHOULD be used only for rules that apply broadly to the technology or define default behavior when no more specific rule applies. Its placement within a guideline document is defined in [§3](#3-guideline-document-structure).
 
 ### Examples
 
