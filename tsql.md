@@ -1,8 +1,6 @@
 # TSQL: Transact-SQL (SQL Server / Azure SQL)
 
-**Goal:** consistent DDL regardless of whether it is written by a human or an AI.
-
-**Status:** working draft, expanded alongside the development of the `shop_demo` project.
+**Goal:** consistent DDL regardless of whether it is written by a human or an AI, developed alongside the `shop_demo` project.
 
 ## Table of Contents
 

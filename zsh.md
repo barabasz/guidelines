@@ -1,8 +1,6 @@
 # ZSH: Zsh Shell
 
-**Goal:** idiomatic zsh code, without bash/POSIX compatibility baggage — for both human- and AI-written scripts.
-
-**Status:** adapted from the `zconfig` project's zsh coding guidelines into this repository's rule format.
+**Goal:** idiomatic zsh code, without bash/POSIX compatibility baggage — for both human- and AI-written scripts. Adapted from the `zconfig` project's zsh coding guidelines.
 
 ## Table of Contents
 

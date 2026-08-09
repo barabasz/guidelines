@@ -1,7 +1,5 @@
 # PHP: Hypertext Preprocessor
 
-**Status:** working draft — early stub, expanded incrementally as needs arise.
-
 ## Table of Contents
 
 - [GENERAL](#general)

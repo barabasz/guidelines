@@ -61,7 +61,7 @@ Where a technology has both a language-independent form and one or more dialect-
 | `M`        | Power Query M Language |
 | `PBI`      | Microsoft Power BI — product-specific |
 | `PGSQL`    | PostgreSQL — dialect-specific guidelines |
-| `PHP`      | PHP |
+| `PHP`      | Hypertext Preprocessor |
 | `PY`       | Python |
 | `SQL`      | SQL — dialect-agnostic guidelines based on the SQL standard |
 | `TSQL`     | Transact-SQL (SQL Server / Azure SQL) — dialect-specific guidelines |
