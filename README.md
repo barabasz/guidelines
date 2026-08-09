@@ -25,7 +25,7 @@ Every technical rule in a guideline document **MUST** have a stable, unique iden
 ### Format Specifications
 
 * **TECH**: The canonical uppercase technology identifier defined in the Technology Registry below. When adding a new technology, choose a short, natural, widely recognized, and unambiguous identifier. Its length is not fixed in advance.
-* **CATEGORY**: An uppercase word representing the subject area (e.g., `TABLE`, `VIEW`, `NAMING`). It **SHOULD** be short, natural, and clear, and **SHOULD** use the singular form (see the Category Registry below). Its length is not fixed in advance. Existing category identifiers **SHOULD** be reused when they accurately represent the same subject; synonymous categories **SHOULD NOT** be introduced without a specific reason.
+* **CATEGORY**: An uppercase word representing the subject area (e.g., `TABLE`, `VIEW`, `NAMING`). It **SHOULD** be short, natural, and clear, and **SHOULD** use the non-plural form (see the Category Registry below). Its length is not fixed in advance. Existing category identifiers **SHOULD** be reused when they accurately represent the same subject; synonymous categories **SHOULD NOT** be introduced without a specific reason.
 * **NUMBER**: A 3-digit number unique within each `TECH-CATEGORY` combination. New rules **SHOULD** normally use increments of 10 (`010`, `020`, `030`, ...). Intermediate numbers **MAY** be used when inserting related rules between existing ones.
 
 ### Key Principles
@@ -50,10 +50,10 @@ Where a technology has both a language-independent form and one or more dialect-
 | `EXCEL`    | Microsoft Excel |
 | `M`        | Power Query M Language |
 | `PBI`      | Microsoft Power BI — product-specific |
-| `PGSQL`    | PostgreSQL / PL-pgSQL — language-specific guidelines |
+| `PGSQL`    | PostgreSQL — product- and dialect-specific guidelines |
 | `PHP`      | PHP |
 | `PY`       | Python |
-| `SQL`      | SQL — language-independent, dialect-agnostic (ANSI SQL) guidelines |
+| `SQL`      | SQL — dialect-agnostic guidelines based on the SQL standard |
 | `TSQL`     | Transact-SQL (SQL Server / Azure SQL) — language-specific guidelines |
 | `VBA`      | Visual Basic for Applications |
 | `WORD`     | Microsoft Word |
@@ -65,7 +65,7 @@ Where a technology has both a language-independent form and one or more dialect-
 
 Category identifiers are semantic labels, not fixed-length codes. Their length is not fixed, and natural readability takes precedence over uniform length. Synonymous or near-duplicate categories SHOULD NOT be introduced.
 
-Category identifiers use the **singular form** by convention (e.g. `TYPE`, not `TYPES`; `ERROR`, not `ERRORS`), regardless of whether the underlying subject is typically discussed in the plural elsewhere. This is a deliberate, fixed convention adopted for consistency: a category identifier is a topic label ("a rule about type"), not a count of instances.
+Category identifiers use the **non-plural form** by convention (e.g. `TYPE`, not `TYPES`; `ERROR`, not `ERRORS`). A natural gerund or mass noun MAY be used where it better represents the subject (e.g. `NAMING`, `FORMATTING`, `TESTING`, `DOCUMENTATION`).
 
 | Identifier | Intended Scope |
 | :--------- | :--------------- |
@@ -138,7 +138,7 @@ When adding or modifying guidelines in this repository, follow these core princi
 1. **Clear and Actionable Rules**: Rules **SHOULD** state what to do or avoid in concrete terms. Avoid vague advice such as "write clean code", "use meaningful names", or "follow best practices" unless the document defines what those phrases mean in the relevant context.
 2. **One Rule, One Subject**: A rule **SHOULD** address one coherent requirement or a closely related set of requirements. Independent requirements **SHOULD** use separate Rule IDs.
 3. **Language**: All guideline files **MUST** be written in English.
-4. **International Standards and Units**: Guidelines **SHOULD** prefer established international standards over locale-specific or ad-hoc conventions. Dates and times **SHOULD** use ISO standards where applicable, and relevant time zones **SHOULD** be stated explicitly. Physical quantities **MUST** use SI units unless another unit is required by an external system, interface, protocol, or domain-specific standard.
+4. **International Standards and Units**: Guidelines **SHOULD** prefer established international standards over locale-specific or ad-hoc conventions. Dates and times **SHOULD** use [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) / [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) representations where applicable, and relevant time zones **SHOULD** be stated explicitly. Physical quantities **MUST** use SI units unless another unit is required by an external system, interface, protocol, or domain-specific standard.
 5. **Explicit Scope When Needed**: If a rule applies only to a subset of a technology or only under specific conditions, its scope **SHOULD** be stated explicitly. A `Scope` field is optional and **SHOULD NOT** be added when the scope is already obvious.
 6. **Rationale When Valuable**: A rationale is optional. It **SHOULD** be included when the reason behind a rule is non-obvious, easy to forget, or important for making future decisions. A rationale **MUST NOT** introduce additional normative requirements that are absent from the rule itself.
 7. **Examples When Useful**: Examples are optional. A rule may contain a Good Example, a Bad Example, both, or neither. Examples **SHOULD** be included when they materially improve understanding, especially for complex or non-obvious rules. Examples **MUST NOT** introduce additional normative requirements.
