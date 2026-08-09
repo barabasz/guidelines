@@ -19,18 +19,18 @@ Every rule **MUST** have a permanent, unique identifier using the following form
 `[TECH]-[CATEGORY]-[NUMBER]`
 
 ### Format Specifications:
-* **TECH**: 3-letter uppercase identifier (e.g., `SQL`, `PYT`, `ZSH`, `VBA`).
-* **CATEGORY**: 3-letter uppercase category code (e.g., `TAB` for Tables, `VIW` for Views, `FMT` for Formatting).
-* **NUMBER**: 3-digit number. Numbers **SHOULD** increment by 10 (e.g., `010`, `020`, `030`) to leave room for future intermediate rules.
+* **TECH**: Standard 3-letter uppercase identifier from the Technology Registry (e.g., `SQL`, `PYT`, `VBA`).
+* **CATEGORY**: Full uppercase word representing the functional domain (e.g., `TABLE`, `VIEW`, `QUERY`, `FORMATTING`, `SECURITY`).
+* **NUMBER**: 3-digit number. Numbers **SHOULD** increment by 10 (e.g., `010`, `020`, `030`) to leave room for intermediate rules.
 
 ### Immutability Constraint:
-Once a Rule ID is published and referenced, it **MUST NOT** be changed or re-used, even if the rule's internal requirement changes or becomes obsolete. If a rule is retired, mark its status as `[DEPRECATED]`.
+Once a Rule ID is assigned, it **MUST NOT** be modified or re-used, even if the underlying requirement changes or becomes obsolete. If a rule is retired, change its status to `[DEPRECATED]`.
 
 ### Examples:
-* `SQL-TAB-010`
-* `SQL-VIW-020`
-* `PYT-FMT-010`
-* `VBA-ERR-030`
+* `SQL-TABLE-010`: Naming conventions for database tables
+* `SQL-VIEW-020`: Materialized view refresh requirements
+* `PYT-FORMATTING-010`: Type hints on public functions
+* `VBA-ERROR-010`: Explicit error handling requirements
 
 ## 3. Standard Rule Structure
 
