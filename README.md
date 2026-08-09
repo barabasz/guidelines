@@ -1,6 +1,6 @@
 # Technical Guidelines & Standards
 
-This repository serves as the Single Source of Truth (SSOT) for technical standards, best practices, and project conventions across software engineering, data management, Business Intelligence (BI), and system configuration. It is designed to be clear, structured, and directly actionable for both human engineers (including me in first place) and Large Language Models (LLMs / AI assistants).
+This repository serves as the Single Source of Truth (SSOT) for technical standards, best practices, and project conventions across software engineering, data management, Business Intelligence (BI), and system configuration. It is designed to be clear, structured, and directly actionable for both human engineers (including me in the first place) and Large Language Models (LLMs / AI assistants).
 
 A full list of available standards is maintained in the [TOC.md](TOC.md).
 
@@ -8,7 +8,7 @@ A full list of available standards is maintained in the [TOC.md](TOC.md).
 
 All guidelines use standard severity keywords as defined in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119) and [RFC 8174](https://datatracker.ietf.org/doc/html/rfc8174). When written in ALL CAPS, they carry the following interpretations:
 
-* **MUST / MUST NOT**: Absolute requirement. Code that violates a MUST rule is considered broken or unsafe.
+* **MUST / MUST NOT**: Absolute requirement. Code or configuration that violates a MUST rule is considered broken, non-compliant, or unsafe.
 * **SHOULD / SHOULD NOT**: Strong recommendation. Valid exceptions may exist in specific contexts, but they must be explicitly justified during code review.
 * **MAY**: Fully optional. Represents a preferred convention when multiple valid choices exist.
 
@@ -29,6 +29,21 @@ Every rule **MUST** have a permanent, unique identifier using the following form
 1. **No Arbitrary Length Caps**: Neither `TECH` nor `CATEGORY` has a fixed character limit. Natural readability, clarity, and widespread adoption always supersede rigid length restrictions.
 2. **Immutability**: Once assigned and published, a Rule ID **MUST NOT** be modified or re-used, even if the underlying rule evolves, changes direction, or becomes obsolete. If a rule is retired, change its status to `[DEPRECATED]`.
 
+### Technology Registry (`TECH`):
+
+To maintain repository-wide consistency, use the following standardized identifiers:
+
+| Identifier | Technology / Domain |
+| :--- | :--- |
+| `SQL` | Relational Databases & SQL Dialects |
+| `PY` | Python |
+| `M` | Power Query M Language |
+| `DAX` | Data Analysis Expressions |
+| `PBI` | Power BI (Architecture & General) |
+| `VBA` | Visual Basic for Applications |
+| `ZSH` | Zsh Shell Scripts |
+| `BASH` | Bash / Generic Shell Scripts |
+
 ### Examples:
 * `SQL-TABLE-010`: Naming conventions for database tables
 * `PY-TYPES-010`: Explicit type hinting for public functions
@@ -37,14 +52,10 @@ Every rule **MUST** have a permanent, unique identifier using the following form
 
 ## 3. Standard Rule Structure
 
-Every rule in a guideline document **SHOULD** follow this structural template to ensure parsing consistency for both humans and AI:
-
-````markdown
-## 3. Standard Rule Structure
-
 Every rule in a guideline document **MUST** follow this structural template to ensure parsing consistency for both humans and AI:
 
-### [TECH]-[CAT]-[NNN]: [Short Rule Title]
+````markdown
+### [TECH]-[CATEGORY]-[NUMBER]: [Short Rule Title]
 
 * Severity: **[MUST | SHOULD | MAY]**
 * Status: **[ACTIVE | DEPRECATED | EXPERIMENTAL]**
@@ -58,7 +69,7 @@ Every rule in a guideline document **MUST** follow this structural template to e
 
 #### Bad Example
 ```[language]
-[Compliant code snippet]
+[Non-compliant code snippet]
 ```
 ````
 
