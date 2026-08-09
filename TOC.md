@@ -5,5 +5,6 @@ Index of all technology-specific guideline documents in this repository. Reposit
 | Technology | Guideline | Description |
 | :--------- | :-------- | :----------- |
 | `PHP`      | [php.md](php.md)   | Hypertext Preprocessor |
+| `PY`       | [py.md](py.md)     | Python |
 | `TSQL`     | [tsql.md](tsql.md) | Transact-SQL (SQL Server / Azure SQL) |
 | `ZSH`      | [zsh.md](zsh.md)   | Zsh Shell |
