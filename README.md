@@ -2,8 +2,6 @@
 
 This repository serves as the Single Source of Truth (SSOT) for programming standards across projects. It is designed to be easily readable by both human software engineers and Large Language Models (LLMs / AI assistants).
 
----
-
 ## 1. Requirement Levels (RFC 2119)
 
 All guidelines use standard severity keywords as defined in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119) and [RFC 8174](https://datatracker.ietf.org/doc/html/rfc8174). When written in ALL CAPS, they carry the following interpretations:
@@ -12,37 +10,39 @@ All guidelines use standard severity keywords as defined in [RFC 2119](https://d
 * **SHOULD / SHOULD NOT**: Strong recommendation. Valid exceptions may exist in specific contexts, but they must be explicitly justified during code review.
 * **MAY**: Fully optional. Represents a preferred convention when multiple valid choices exist.
 
----
+## 2. Rule Identification Protocol
 
-## 2. Rule Identification & Naming Protocol
+Every rule **MUST** have a permanent, unique identifier using the following format:
 
-To avoid issues with inserting new rules between existing ones, **do not use sequential numbers** (e.g., `RULE-01`, `RULE-02`). 
+`[TECH]-[CATEGORY]-[NUMBER]`
 
-Instead, every rule **MUST** have a unique, descriptive slug identifier using the following format:
+### Format Specifications:
+* **TECH**: 3-letter uppercase identifier (e.g., `SQL`, `PYT`, `ZSH`, `VBA`).
+* **CATEGORY**: 3-letter uppercase category code (e.g., `TAB` for Tables, `VIW` for Views, `FMT` for Formatting).
+* **NUMBER**: 3-digit number. Numbers **SHOULD** increment by 10 (e.g., `010`, `020`, `030`) to leave room for future intermediate rules.
 
-`RULE-[TECHNOLOGY]-[CATEGORY]-[DESCRIPTIVE-SLUG]`
-
-### Format Rules:
-* All letters **MUST** be UPPERCASE.
-* Words **MUST** be separated by hyphens (`-`).
-* The identifier **MUST** remain permanent once assigned (do not change existing IDs to maintain Git diff stability and prompt consistency).
+### Immutability Constraint:
+Once a Rule ID is published and referenced, it **MUST NOT** be changed or re-used, even if the rule's internal requirement changes or becomes obsolete. If a rule is retired, mark its status as `[DEPRECATED]`.
 
 ### Examples:
-* `RULE-SQL-NAMING-SNAKE-CASE`
-* `RULE-PYTHON-TYPES-EXPLICIT-RETURN`
-* `RULE-VBA-VARIABLES-OPTION-EXPLICIT`
-
----
+* `SQL-TAB-010`
+* `SQL-VIW-020`
+* `PYT-FMT-010`
+* `VBA-ERR-030`
 
 ## 3. Standard Rule Structure
 
 Every rule in a guideline document **SHOULD** follow this structural template to ensure parsing consistency for both humans and AI:
 
 ````markdown
-### RULE-[TECH]-[CATEGORY]-[SLUG]: [Short Rule Title]
+## 3. Standard Rule Structure
+
+Every rule in a guideline document **MUST** follow this structural template to ensure parsing consistency for both humans and AI:
+
+### [TECH]-[CAT]-[NNN]: [Short Rule Title]
 
 * Severity: **[MUST | SHOULD | MAY]**
-* Category: **[Naming | Security | Formatting | Performance | Architecture]**
+* Status: **[ACTIVE | DEPRECATED | EXPERIMENTAL]**
 
 [Clear, concise description of the rule in 1-3 sentences.]
 
