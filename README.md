@@ -1,6 +1,6 @@
 # Technical Guidelines & Standards
 
-This repository serves as the Single Source of Truth (SSOT) for technical standards, best practices, and project conventions across software engineering, data management, Business Intelligence (BI), and system configuration. It is designed to be clear, concise, and directly actionable for both human engineers (including me in the first place) and Large Language Models (LLMs / AI assistants).
+This repository serves as the [Single Source of Truth](https://en.wikipedia.org/wiki/Single_source_of_truth) (SSOT) for technical standards, best practices, and project conventions across software engineering, data management, Business Intelligence (BI), and system configuration. It is designed to be clear, concise, and directly actionable for both human engineers (including me in the first place) and Large Language Models (LLMs / AI assistants).
 
 A full list of available standards is maintained in [TOC.md](TOC.md).
 
