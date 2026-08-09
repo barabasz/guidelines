@@ -1,7 +1,5 @@
 # PY: Python
 
-**Goal:** consistent, PEP 8-aligned Python code, written by either a human or an AI.
-
 ## Table of Contents
 
 - [GENERAL](#general)

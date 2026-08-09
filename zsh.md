@@ -1,7 +1,5 @@
 # ZSH: Zsh Shell
 
-**Goal:** idiomatic zsh code, without bash/POSIX compatibility baggage — for both human- and AI-written scripts. Adapted from the `zconfig` project's zsh coding guidelines.
-
 ## Table of Contents
 
 - [GENERAL](#general)
@@ -471,6 +469,3 @@ str_contains() {
 
 Functions SHOULD be kept small and focused on a single responsibility.
 
----
-
-*Adapted from the `zconfig` project's zsh coding guidelines. Project-specific tooling conventions (e.g. the `zfile_track_start`/`zfile_track_end` file-tracking calls, the `is_installed` helper) were intentionally left out as out of scope for a technology-wide guideline — see the accompanying note for how to handle project-specific conventions.*

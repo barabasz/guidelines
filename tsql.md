@@ -1,7 +1,5 @@
 # TSQL: Transact-SQL (SQL Server / Azure SQL)
 
-**Goal:** consistent DDL regardless of whether it is written by a human or an AI, developed alongside the `shop_demo` project.
-
 ## Table of Contents
 
 - [NAMING](#naming)
@@ -457,6 +455,3 @@ CREATE OR ALTER VIEW shop.active_orders AS
 ...
 ```
 
----
-
-*Working draft — expanded alongside the `shop_demo` project. Planned additions: conventions for stored procedures and functions, triggers, T-SQL error handling, and code comment standards.*
