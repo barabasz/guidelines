@@ -37,18 +37,49 @@ Every technical rule in a guideline document **MUST** have a stable, unique iden
 
 ### Technology Registry (`TECH`)
 
-To maintain repository-wide consistency, use the following standardized identifiers:
+`TECH` MUST use the canonical identifier defined in this registry. When adding a technology or technical domain that is not yet listed, a new identifier MAY be added. New identifiers SHOULD be short, natural, widely recognizable, and unambiguous; their length is not fixed.
 
-| Identifier | Technology / Domain |
-| :--- | :--- |
-| `SQL` | Relational Databases & SQL Dialects |
-| `PY` | Python |
-| `M` | Power Query M Language |
-| `DAX` | Data Analysis Expressions |
-| `PBI` | Power BI (Architecture & General) |
-| `VBA` | Visual Basic for Applications |
-| `ZSH` | Zsh Shell Scripts |
-| `BASH` | Bash / Generic Shell Scripts |
+| Identifier | Technology / Domain                          |
+| :--------- | :------------------------------------------- |
+| `AI`       | Artificial Intelligence / AI Assistants      |
+| `BASH`     | Bash Shell                                   |
+| `DAX`      | Data Analysis Expressions                    |
+| `EXCEL`    | Microsoft Excel                              |
+| `M`        | Power Query M Language                       |
+| `PBI`      | Microsoft Power BI                           |
+| `PGSQL`    | PostgreSQL                                   |
+| `PHP`      | PHP                                          |
+| `PY`       | Python                                       |
+| `SQL`      | SQL / General Relational Database Guidelines |
+| `VBA`      | Visual Basic for Applications                |
+| `WORD`     | Microsoft Word                               |
+| `ZSH`      | Zsh Shell                                    |
+
+### Category Registry (`CATEGORY`)
+
+`CATEGORY` MUST use a canonical identifier from this registry whenever an existing category accurately describes the subject of the rule. New categories MAY be added when no existing identifier fits without making the rule misleading or overly broad.
+
+Category identifiers are semantic labels, not fixed-length codes. Their length is not fixed, and natural readability takes precedence over uniform length. Synonymous or near-duplicate categories SHOULD NOT be introduced.
+
+| Identifier      | Intended Scope                                                                      |
+| :-------------- | :---------------------------------------------------------------------------------- |
+| `NAMING`        | Naming conventions for objects, variables, files, identifiers, and related elements |
+| `FORMATTING`    | Layout, whitespace, indentation, line breaks, and other presentation rules          |
+| `STRUCTURE`     | Organization and composition of code, documents, files, modules, or other artifacts |
+| `COMMENTS`      | Inline comments, code comments, annotations, and rules governing their use          |
+| `DOCUMENTATION` | Docstrings, README content, user-facing or developer-facing documentation           |
+| `TYPES`         | Data types, type declarations, type annotations, conversions, and related rules     |
+| `ERRORS`        | Error handling, exceptions, failure behavior, and recovery                          |
+| `VALIDATION`    | Validation of input, data, assumptions, parameters, or state                        |
+| `SECURITY`      | Security-related practices, restrictions, and safeguards                            |
+| `PERFORMANCE`   | Performance, efficiency, resource usage, and optimization                           |
+| `TESTING`       | Automated or manual testing practices and test organization                         |
+| `CONFIGURATION` | Configuration, settings, environment-specific behavior, and configuration files     |
+| `DEPENDENCIES`  | External libraries, packages, modules, extensions, and dependency management        |
+| `TABLE`         | Database table design and table-specific rules                                      |
+| `VIEW`          | Database view design and view-specific rules                                        |
+| `QUERY`         | SQL queries and query construction                                                  |
+
 
 ### Examples
 
