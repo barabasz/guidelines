@@ -125,6 +125,8 @@ Every technical rule in a guideline document **MUST** use the following core str
 ```
 ````
 
+**Markdown Note:** Because the rule template contains fenced code blocks using three backticks, the outer fence used to present the complete Markdown template MUST use four backticks. This prevents the inner code fences from prematurely closing the outer block.
+
 ### Why There Is No Status Field
 
 Guideline documents intentionally contain only current rules. A rule's presence in the current version of a guideline document means that it is current and active; its applicability is determined by the rule itself and, when present, its scope. Therefore, rules do not have an explicit `Status` field.
