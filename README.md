@@ -4,7 +4,8 @@ This repository serves as the [Single Source of Truth](https://en.wikipedia.org/
 
 A full list of available standards is maintained in [TOC.md](TOC.md).
 
-**Disclaimer:** These guidelines are a practical, evolving reference created primarily for my own use, as well as for other interested people and AI assistants. They are not an industry standard, formal specification, or institutional policy, and no long-term semantic stability of individual rules or Rule IDs is guaranteed. The current version of the repository defines the current guidance; Git history preserves how that guidance has evolved over time.
+> [!NOTE]
+> **Disclaimer:** These guidelines are a practical, evolving reference created primarily for my own use, as well as for other interested people and AI assistants. They are not an industry standard, formal specification, or institutional policy, and no long-term semantic stability of individual rules or Rule IDs is guaranteed. The current version of the repository defines the current guidance; Git history preserves how that guidance has evolved over time.
 
 This README defines repository-level conventions for writing and maintaining guideline documents. It is not itself a technology-specific guideline, so the meta-guidelines in this file do not use Rule IDs.
 
